@@ -8,4 +8,4 @@ const Tabs = (props) => {
   )
 }
 
-export { Tabs } 
+export default Tabs 

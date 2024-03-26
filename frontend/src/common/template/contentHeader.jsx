@@ -8,4 +8,4 @@ const ContentHeader = (props) => {
   )
 }
 
-export { ContentHeader }
+export default ContentHeader

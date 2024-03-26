@@ -8,4 +8,4 @@ const TabsHeader = (props) => {
   )
 }
 
-export { TabsHeader } 
+export default TabsHeader 

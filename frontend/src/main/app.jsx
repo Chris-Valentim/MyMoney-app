@@ -4,7 +4,6 @@ import React from 'react';
 import { Header } from '../common/template/header'
 import { SiderBar } from '../common/template/sideBar';
 import { Footer } from '../common/template/footer';
-import { Routes } from './routes';
 import { Messages } from '../common/msg/messages'
 
 const App = () => {
@@ -13,7 +12,7 @@ const App = () => {
       <Header />
       <SiderBar />
       <div className='content-wrapper'>
-        <Routes />
+        {props.children}
       </div>
       <Footer />
       <Messages />
