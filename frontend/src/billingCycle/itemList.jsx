@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Field, arrayInsert } from 'redux-form'
 import Grid from '../common/layout/grid';
-import Input from '../common/layout/input';
+import Input from '../common/form/input';
 import { bindActionCreators } from "redux";
 import If from '../common/operador/if'
 
