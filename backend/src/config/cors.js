@@ -9,7 +9,7 @@ module.exports = () => {
   // Resto da sua configuração do servidor
   // ...
   
-  app.listen(27017, () => {
+  app.listen(3003, () => {
     console.log('Servidor em execução na porta 27017');
   });
   
