@@ -1,11 +1,5 @@
-import React from "react";
+import React from 'react'
 
-const Content = (props) => {
-  return(
-    <section className="content">
-      {props.children}
-    </section>
-  )
-}
-
-export { Content }
+export default props => (
+  <section className='content'>{props.children}</section>
+)

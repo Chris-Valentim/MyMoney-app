@@ -1,6 +1,6 @@
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
- 
+
 module.exports = {
     entry: './src/index.jsx',
     output: {
@@ -19,7 +19,7 @@ module.exports = {
             bootstrap: 'modules/admin-lte/bootstrap/js/bootstrap.js'
         }
     },
-    plugins: [ 
+    plugins: [
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',

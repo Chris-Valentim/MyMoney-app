@@ -1,14 +1,9 @@
-import React from "react"
+import React from 'react'
 
-const Input = (props) => {
-  return (
-    <input {...props.input}
-      className="form-control"
-      placeholder={props.placeholder}
-      readOnly={props.readOnly}
-      type={props.type}
-    />
-  )
-}
-
-export { Input }
+export default props => (
+  <input {...props.input}
+    className='form-control'
+    placeholder={props.placeholder}
+    readOnly={props.readOnly}
+    type={props.type} />
+)

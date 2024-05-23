@@ -1,11 +1,7 @@
-import React from "react";
+import React from 'react'
 
-const TabsHeader = (props) => {
-  return(
-    <ul className="tab-content">
-      {props.children}
-    </ul>
-  )
-}
-
-export { TabsHeader } 
+export default props => (
+  <ul className='nav nav-tabs'>
+    {props.children}
+  </ul>
+)
