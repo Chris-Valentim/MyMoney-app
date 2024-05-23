@@ -3,7 +3,7 @@ import { toastr } from "react-redux-toastr";
 import { reset as initialize } from 'redux-form';
 import { showTabs, selectTab } from "../common/tab/tabActions";
 
-const BASE_URL = "http://localhost:27017/api"
+const BASE_URL = "http://localhost:3003/api"
 const INITIAL_VALUES = {credits: [{}], debts: [{}]}
 
 export function getList() {
