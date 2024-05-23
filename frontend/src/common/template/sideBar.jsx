@@ -11,4 +11,4 @@ const SiderBar = () => {
   )
 }
 
-export { SiderBar }
+export { SiderBar } 

@@ -1,13 +1,15 @@
 import React, { Component } from "react";
+import axios from "axios";
+
 import { ContentHeader } from '../common/template/contentHeader'
 import { Content } from '../common/template/content'
 import { ValueBox } from '../common/widget/valueBox'
 import { Row } from '../common/layout/row'
-import axios from "axios";
+
 
 const BASE_URL = "http://localhost:27017/api"
 
-export default class Dashboard2 extends Component {
+class Dashboard2 extends Component {
 
   constructor(props) {
     super(props)
@@ -53,3 +55,5 @@ export default class Dashboard2 extends Component {
     )
   }
 }
+
+export { Dashboard2 }

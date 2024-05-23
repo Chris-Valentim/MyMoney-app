@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { bindActnioCreators } from "redux"
 import { connect } from "react-redux";
 import If from "../operador/if";
 

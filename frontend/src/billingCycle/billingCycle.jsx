@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
-import ContentHeader from '../common/template/contentHeader';
-import Content from '../common/template/content';
-import Tabs from '../common/tab/tabs';
-import TabsContent from '../common/tab/tabsContent';
-import TabsHeader from '../common/tab/tabsHeader';
+import { ContentHeader } from '../common/template/contentHeader';
+import { Content } from '../common/template/content';
+import { Tabs } from '../common/tab/tabs';
+import { TabsContent } from '../common/tab/tabsContent';
+import { TabsHeader } from '../common/tab/tabsHeader';
 import TabHeader from "../common/tab/tabHeader";
 import TabContent from "../common/tab/tabContent";
 

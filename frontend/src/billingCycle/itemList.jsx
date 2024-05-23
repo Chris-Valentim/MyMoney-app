@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import { Field, arrayInsert } from 'redux-form'
-import Grid from '../common/layout/grid';
-import Input from '../common/form/input';
 import { bindActionCreators } from "redux";
-import If from '../common/operador/if'
+import { connect } from "react-redux";
+
+import { Grid } from '../common/layout/grid';
+import { Input } from '../common/form/input';
+import { If } from '../common/operador/if'
 
 class itemList extends Component {
 

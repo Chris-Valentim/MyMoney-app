@@ -4,8 +4,10 @@ import { applyMiddleware, createStore } from 'redux'
 import { Provider  } from 'react-redux';
 import promise from 'redux-promise'
 
-import Routes from './main/routes';
+import { Routes } from './main/routes';
 import reducers from './main/reducers';
+import multi from 'redux-multi'
+import thunk from 'redux-thunk'
 
 const store = applyMiddleware(multi, thunk, promise)(createStore)(reducers);
 ReactDOM.render(
