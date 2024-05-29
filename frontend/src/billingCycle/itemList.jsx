@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 
 import { Grid } from '../common/layout/grid';
 import { Input } from '../common/form/input';
-import { If } from '../common/operador/if'
+import { If } from '../common/operador/If'
 
 class itemList extends Component {
 

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import If from "../operador/if";
+import If from "../operador/If";
 
 class TabContent extends Component {
   render() {
