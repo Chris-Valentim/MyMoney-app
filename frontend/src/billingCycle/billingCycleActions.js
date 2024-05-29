@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { toastr } from 'react-redux-toastr'
-import { reset as resetForm, initialize } from 'redux-form'
+import { reset as initialize } from 'redux-form'
 import { showTabs, selectTab } from '../common/tab/tabActions'
 
 const BASE_URL = 'http://localhost:3003/api'
@@ -30,7 +30,7 @@ function submit(values, method) {
     return dispatch => {
         const id = values._id ? values._id : ''
         axios[method](`${BASE_URL}/billingCycles/${id}`, values)
-            .then(resp => {
+            .then(_ => {
                 toastr.success('Sucesso', 'Operação Realizada com sucesso.')
                 dispatch(init())
             })

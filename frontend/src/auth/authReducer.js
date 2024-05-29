@@ -4,7 +4,7 @@ const INITIAL_STATE = {
   validToken: false
 }
 
-export default (state = INITIAL_STATE) => {
+export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case 'TOKEN_VALIDATED':
       if (action.payload) {
