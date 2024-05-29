@@ -4,7 +4,7 @@ import If from '../operador/If';
 export default props => {
   <If test={!props.hide}>
     <div className="form-group has-feedback">
-      <Input
+      <input
         {...props.input}
         className="form-control"
         placeholder={props.placeholder}

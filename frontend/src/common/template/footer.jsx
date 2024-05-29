@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default props => (
+export default () => (
   <footer className='main-footer'>
     <strong>
       Copyright &copy; 2017

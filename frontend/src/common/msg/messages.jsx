@@ -10,5 +10,6 @@ export default () => (
     position='top-right'
     transitionIn='fadeIn'
     transitionOut='fadeOut'
-    progressBar />
+    progressBar
+  />
 )
