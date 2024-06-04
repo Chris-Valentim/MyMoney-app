@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 
 import { Grid } from '../common/layout/grid';
 import { Input } from '../common/form/input';
-import { If } from '../common/operador/If'
+import If from '../common/operador/if'
 
 class itemList extends Component {
 
@@ -77,26 +77,28 @@ class itemList extends Component {
     }
 
     render() {
-        <Grid cols={this.props.cols}>
-            <fieldset>
-                <legend>{this.props.legend}</legend>
-                <table className="table">
-                    <thead>
-                        <tr>
-                            <th>Nome</th>
-                            <th>Valor</th>
-                            <If test={this.props.showStatus}>
-                                <th>Status</th>
-                            </If>
-                            <th className="table-action">Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {this.renderRows()}
-                    </tbody>
-                </table>
-            </fieldset>
-        </Grid>
+        return (
+            <Grid cols={this.props.cols}>
+                <fieldset>
+                    <legend>{this.props.legend}</legend>
+                    <table className="table">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Valor</th>
+                                <If test={this.props.showStatus}>
+                                    <th>Status</th>
+                                </If>
+                                <th className="table-action">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {this.renderRows()}
+                        </tbody>
+                    </table>
+                </fieldset>
+            </Grid>
+        )
     }
 }
 

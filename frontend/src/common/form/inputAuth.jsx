@@ -1,6 +1,6 @@
 import React from "react";
 
-export default props => {
+export default props => (
   <div className="form-group has-feedback">
     <input
       {...props.input}
@@ -12,4 +12,4 @@ export default props => {
     <span className={`glyphicon glyphicon-${props.icon} form-control-feedback`}>
     </span>
   </div>
-}
+)
