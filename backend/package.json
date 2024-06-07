@@ -5,18 +5,18 @@
   "main": "src/loader.js",
   "scripts": {
     "dev": "nodemon",
-    "production": "pm2 start src/loader.js --name my-money-backend",
-    "debug": "node --inspect-brk your-script.js"
+    "production": "pm2 start src/loader.js --name my-money-backend"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^5.0.0",
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.15.2",
+    "brcypt": "^1.0.1",
     "express": "^4.14.0",
     "express-query-int": "^1.0.1",
-    "jsonwebtoken": "^7.3.0",
+    "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.4",
     "mongoose": "^4.7.0",
     "mongoose-paginate": "^5.0.3",
@@ -24,6 +24,6 @@
     "pm2": "^2.1.5"
   },
   "devDependencies": {
-    "nodemon": "^1.19.4"
+    "nodemon": "^1.11.0"
   }
 }

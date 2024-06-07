@@ -1,6 +1,6 @@
 const _ = require('lodash')
 const jwt = require('jsonwebtoken')
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcryptjs');
 const User = require('./user')
 const env = require('../../.env')
 
@@ -13,6 +13,14 @@ const sendErrorsFromDB = (res, dbErrors) => {
   return res.status(400).json({ errors })
 }
 
+const generateToken = (user) => {
+  const payload = {
+    id: user._id,
+    email: user.email
+  };
+  return jwt.sign(payload, env.authSecret, { expiresIn: "1 day" });
+}
+
 const login = (req, res, next) => {
   const email = req.body.email || ''
   const password = req.body.password || ''
@@ -20,9 +28,7 @@ const login = (req, res, next) => {
     if (err) {
       return sendErrorsFromDB(res, err)
     } else if (user && bcrypt.compareSync(password, user.password)) {
-      const token = jwt.sign(user, env.authSecret, {
-        expiresIn: "1 day"
-      })
+      const token = generateToken(user);
       const { name, email } = user
       res.json({ name, email, token })
     } else {
