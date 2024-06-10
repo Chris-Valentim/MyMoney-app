@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Field, arrayInsert } from 'redux-form'
+import { Field, arrayInsert, arrayRemove } from 'redux-form'
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
@@ -102,5 +102,5 @@ class itemList extends Component {
     }
 }
 
-const mapDispatchToProps = dispatch => bindActionCreators({ arrayInsert }, dispatch)
+const mapDispatchToProps = dispatch => bindActionCreators({ arrayInsert, arrayRemove }, dispatch)
 export default connect(null, mapDispatchToProps)(itemList)
