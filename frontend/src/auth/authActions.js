@@ -19,7 +19,8 @@ function submit(values, url) {
         ])
       })
       .catch(e => {
-        e.response.data.errors.forEach(error => toastr.error('Erro', error))
+        e.response.data.errors.forEach(
+          error => toastr.error('Erro', error))
       })
   }
 }
@@ -35,7 +36,7 @@ export function validateToken(token) {
         .then(resp => {
           dispatch({ type: 'TOKEN_VALIDATED', payload: resp.data.valid })
         })
-        .catch(_ => dispatch({ type: 'TOKEN_VALIDATED', payload: false }))
+        .catch(e => dispatch({ type: 'TOKEN_VALIDATED', payload: false }))
     } else {
       dispatch({ type: 'TOKEN_VALIDATED', payload: false })
     }
