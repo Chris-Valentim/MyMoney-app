@@ -81,7 +81,9 @@ class ItemList extends Component {
         return (
             <Grid cols={this.props.cols}>
                 <fieldset>
-                    <legend>{this.props.legend}</legend>
+                    <legend>
+                        {this.props.legend}
+                    </legend>
                     <table className='table'>
                         <thead>
                             <tr>
@@ -90,7 +92,9 @@ class ItemList extends Component {
                                 <If test={this.props.showStatus}>
                                     <th>Status</th>
                                 </If>
-                                <th className='table-actions'>Ações</th>
+                                <th className='table-actions'>
+                                    Ações
+                                </th>
                             </tr>
                         </thead>
                         <tbody>

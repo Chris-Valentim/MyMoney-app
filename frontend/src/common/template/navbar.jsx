@@ -19,10 +19,11 @@ class Navbar extends Component {
             <div className="navbar-custom-menu">
                 <ul className="nav navbar-nav">
                     <li
-                        onMouseLeave={() => this.changeOpen()} className={`dropdown user user-menu ${this.state.open ? 'open' : ''}`}>
+                        onMouseLeave={() => this.changeOpen()}
+                        className={`dropdown user user-menu ${this.state.open ? 'open' : ''}`}
+                    >
                         <a
-                            href="javascript:;"
-                            onClick={() => this.changeOpen()}
+                            href="javascript:;" onClick={() => this.changeOpen()}
                             aria-expanded={this.state.open ? 'true' : 'false'}
                             className="dropdown-toggle"
                             data-toggle="dropdown"
@@ -43,7 +44,9 @@ class Navbar extends Component {
                                     className="img-circle"
                                     alt="User Image"
                                 />
-                                <p>{name}<small>{email}</small></p>
+                                <p>
+                                    {name}<small>{email}</small>
+                                </p>
                             </li>
                             <li className="user-footer">
                                 <div className="pull-right">

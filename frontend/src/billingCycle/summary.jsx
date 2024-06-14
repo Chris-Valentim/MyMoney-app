@@ -7,7 +7,9 @@ import ValueBox from '../common/widget/valueBox'
 export default ({ credit, debt }) => (
     <Grid cols='12'>
         <fieldset>
-            <legend>Resumo</legend>
+            <legend>
+                Resumo
+            </legend>
             <Row>
                 <ValueBox
                     cols='12 4'
