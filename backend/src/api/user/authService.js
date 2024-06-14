@@ -2,7 +2,6 @@ const _ = require('lodash')
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs');
 const User = require('./user')
-const env = require('../../.env')
 
 const emailRegex = /\S+@\S+\.\S+/
 const passwordRegex = /((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})/
@@ -18,7 +17,7 @@ const generateToken = (user) => {
     id: user._id,
     email: user.email
   };
-  return jwt.sign(payload, env.authSecret, { expiresIn: "1 day" });
+  return jwt.sign(payload, "env.authSecret", { expiresIn: "1 day" });
 }
 
 const login = (req, res, next) => {
@@ -39,7 +38,7 @@ const login = (req, res, next) => {
 
 const validateToken = (req, res, next) => {
   const token = req.body.token || ''
-  jwt.verify(token, env.authSecret, function (err, decoded) {
+  jwt.verify(token, "env.authSecret", function (err, decoded) {
     return res.status(200).send({ valid: !err })
   })
 }

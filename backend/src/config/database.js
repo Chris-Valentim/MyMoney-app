@@ -3,7 +3,7 @@ mongoose.Promise = global.Promise;
 
 mongoose.connect('mongodb://localhost/mymoney', {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
 }).then(() => {
   console.log("Conexão ao MongoDB estabelecida com sucesso.");
 }).catch(err => {
